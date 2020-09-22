@@ -1,18 +1,18 @@
 <html>
 <head>
 	<title>CSS Framework Starter Sample</title>
-	
+	<link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
 	
-	<div class="navbar">
+	<div class="navbar sticky">
 		<ul>
-			<li><h1 class="title">Framework Name</h1></li>
+			<li><h1 class="title">JH</h1></li>
 			<li><a href="#colors">Colors</a></li>
 			<li><a href="#navbar">Navbar</a></li>
 			<li><a href="#headings">Headings</a></li>
 			<li><a href="#type">Type</a></li>
-			<li><a href="#forms">forms</a></li>
+			<li><a href="#forms">Forms</a></li>
 			<li><a href="#footer">Footer</a></li>
 		</ul>
 
@@ -78,22 +78,25 @@
 			<p>Custimize buttons by adding CSS variables inline or with a class.</p>
 			<p>
 <button 
-	style="--weight: bold; --background-color: #f85353;"
+	style="--font-weight: bold;--bg-color: #37393d;--border: 2px"
 >Delete</button>
 	<button 
-	style="--background-color: #6bc253;"
+	style="--font-weight: bold;--bg-color: #b27be3;--border: 2px"
 >Go!</button>
 			</p>
 
 			<pre>
 				<code>
 &lt;button 
-	style=&quot;--weight: bold; 
-	--background-color: #f85353;&quot;
+	style=&quot;--font-weight: bold;
+		--bg-color: #37393d;
+		--border: 2px&quot;
 &gt;Delete&lt;/button&gt;
 
 &lt;button 
-	style=&quot;--background-color: #6bc253;&quot;
+	style=&quot;--font-weight: bold;
+		--bg-color: #b27be3;
+		--border: 2px&quot;
 &gt;Go!&lt;/button&gt;
 				</code>
 			</pre>
@@ -129,18 +132,16 @@
 
 				<!-- Switch with Click -->
 				<div>
-					<label id="switch-2" class="switch-2">
-						<input type="checkbox">
-						<div>
-							<div></div>
-						</div>
+					<label id="switch" class="switch">
+						<input type="checkbox" checked>
+						<span class=slider></span>
 					</label>
-					<span>Click Switch no JS</span>
+					<span>Click Switch no JS</span>					
 				</div>
 
 				<label class="control-checkbox">One
 					<input type="checkbox" checked="checked">
-					<span></span>
+					<span class=checkmark></span>
 				</label>
 			</form>
 		</section>

@@ -1,0 +1,218 @@
+:root {
+  --bg-color: #77d1f7;
+  --fg-color: white;
+  --font-size: 16px;
+  --font-weight: normal;
+  --border: 1px;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+h1 {
+  font-size: 4var(--font-size);
+}
+
+h2 {
+  font-size: 8var(--font-size);
+}
+
+h3 {
+  font-size: 12var(--font-size);
+}
+
+h4 {
+  font-size: 16var(--font-size);
+}
+
+h5 {
+  font-size: 20var(--font-size);
+}
+
+h6 {
+  font-size: 24var(--font-size);
+}
+
+/* Style the button */
+button {
+  /* border */
+  border: var(--border) solid var(--bg-color);
+  /* background-color */
+  background-color: var(--fg-color);
+  /* color */
+  color: var(--bg-color);
+  /* padding */
+  padding: 20px;
+  /* border-radius */
+  border-radius: 12px;
+  /* font-size */
+  font-size: var(--font-size)2;
+  font-weight: var(--font-weight);
+  /* Add a hover style */
+}
+button:hover {
+  /* background-color */
+  background-color: var(--bg-color);
+  /* color */
+  color: var(--fg-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+  background-color: #222;
+}
+.navbar > ul {
+  /* Remove the default styles */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  /* Arrange all of the links in a row */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.navbar > ul h1 {
+  color: var(--fg-color);
+}
+.navbar > ul .title {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.navbar li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.navbar li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5em;
+  position: absolute;
+  left: 0;
+  display: none;
+}
+.navbar li:hover > ul, .navbar li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.navbar a {
+  color: #b8bbbf;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5em;
+}
+.navbar a:last-child {
+  padding-right: 1em;
+}
+.navbar a:hover {
+  color: #d7d8db;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #b684e8;
+}
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #b684e8;
+}
+
+/* The checkbox */
+.control-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.control-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.control-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.control-checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.control-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.control-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
