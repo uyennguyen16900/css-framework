@@ -35,7 +35,7 @@ class TabsGroup extends HTMLElement {
     };
 
     try {
-      const stylesRequest = await fetch('/css/components/tabs.css');
+      const stylesRequest = await fetch('./css/tabs-group.css');
 
       if (![200, 304].includes(stylesRequest.status)) {
         return Promise.reject('Error loading CSS');
