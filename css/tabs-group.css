@@ -31,7 +31,7 @@
 
 .tabs__button[aria-selected=true] {
   color: var(--color-dark);
-  border-color: var(--color-primary);
+  border-color: #2196F3;
 }
 
 .tabs__button:focus {
