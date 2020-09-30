@@ -3,9 +3,8 @@
 	<title>CSS Framework Starter Sample</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-	
-	<div class="navbar sticky">
+<body>
+	<div class="navbar sticky dark">
 		<ul>
 			<li><h1 class="title">JH</h1></li>
 			<li><a href="#colors">Colors</a></li>
@@ -23,7 +22,29 @@
 
   <div class="container">
 
-		<section id="headings">
+	<!-- tabs-group -->
+	<!-- <section> -->
+		<tabs-group class="flow">
+			<article>
+			  <h2 data-element="trigger">Summary</h2>
+			  <div data-element="panel" class="flow">
+				<p><strong>This product is good and you should buy it</strong></p>
+				<p>
+				  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit
+				  libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non
+				  magna.
+				</p>
+				<p>
+				  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
+				  ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis
+				  parturient montes, nascetur ridiculus mus.
+				</p>
+			  </div>
+			</article>
+		  </tabs-group>
+	<!-- </section> -->
+
+		<section id="headings" style="margin-top:50px">
 			<h1>Headings</h1>
 			<h1>H1 Heading</h1>
 			<h2>H2 Heading</h2>
@@ -54,11 +75,14 @@
 				abbr for things like <abbr title="Hyper Text Markup Language">HTML</abbr>
 				and <abbr title="Cascading Stylesheets">CSS</abbr>.</p>
 			
-			<pre>
-				<code>
-&lt;p&gt;This is an &lt;strong&gt;average&lt;/strong&gt; paragraph. It includes some &lt;em&gt;inline&lt;/em&gt; elements such as &lt;strong&gt; and &lt;em&gt;.&lt;/p&gt;
-				</code>
-			</pre>
+				<pre>
+					<code>
+&lt;p&gt;This is an &lt;strong&gt;average&lt;/strong&gt; paragraph. It includes some 
+&lt;em&gt;inline&lt;/em&gt; elements such as &lt;strong&gt; and &lt;em&gt;.&lt;/p&gt;
+					</code>
+				</pre>
+			</code-snippet>
+			
 		</section>
 		
 		<section id="forms">
@@ -82,7 +106,7 @@
 >Delete</button>
 	<button 
 	style="--font-weight: bold;--bg-color: #b27be3;--border: 2px"
->Go!</button>
+>Go</button>
 			</p>
 
 			<pre>
@@ -97,52 +121,76 @@
 	style=&quot;--font-weight: bold;
 		--bg-color: #b27be3;
 		--border: 2px&quot;
-&gt;Go!&lt;/button&gt;
+&gt;Go&lt;/button&gt;
 				</code>
 			</pre>
 		</section>
 		
 		<section>
 			<h2>Links</h2>
-			<p>This <a href="#">paragraph</a> contains a couple <a href="#">links</a> to show off their styles in context.</p>
+			<p>This <a class="link" href="#">paragraph</a> contains a couple <a class="link" href="#">links</a> to show off their styles in context.</p>
 		</section>
 
 		<section>
-			<h2>Forms and controls</h2>
+			<h2>Forms and Controls</h2>
 			<form>
 				<label>
-					<span>Text:</span>
-					<input type="text" placeholder="What is your name?">
+					<span>Name</span>
+					<input type="text" placeholder="Enter your name">
 				</label>
 
 				<label>
-					<span>Email:</span>
-					<input type="email" placeholder="What is your name?">
+					<span>Email</span>
+					<input type="email" placeholder="Enter your email address">
 				</label>
 
 				<label>
-					<span>Password:</span>
-					<input type="password" placeholder="What is your name?">
+					<span>Password</span>
+					<input type="password" placeholder="Enter your password">
 				</label>
 
 				<label>
-					<span>Your comments</span>
-					<textarea placeholder="Your comment"></textarea>
+					<span>Message</span>
+					<textarea placeholder="Enter your message"></textarea>
 				</label>
 
-				<!-- Switch with Click -->
-				<div>
-					<label id="switch" class="switch">
-						<input type="checkbox" checked>
-						<span class=slider></span>
-					</label>
-					<span>Click Switch no JS</span>					
-				</div>
+				
 
-				<label class="control-checkbox">One
+				<!-- Checkbox -->
+				<label class="control-checkbox">Remember me
 					<input type="checkbox" checked="checked">
 					<span class=checkmark></span>
 				</label>
+
+				<!-- Switch with Click -->
+				<label id="switch" class="switch">
+					<input type="checkbox" checked>
+					<span class="slider"></span>
+				</label>
+
+				<label id="switch" class="switch">
+					<input type="checkbox" checked>
+					<span class="slider round"></span>
+				</label>
+
+				<pre>
+					<code>
+&lt;label class=&quot;switch&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; checked&gt;
+	&lt;span class=&quot;slider&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; checked&gt;
+	&lt;span class=&quot;slider round&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+					</code>
+				</pre>
+				
+										
+
+				
 			</form>
 		</section>
 
@@ -178,32 +226,48 @@
 		<section id="navbar">
 			<h1>Navbar</h1>
 			
-			<h2>Navbar 1</h2>
 			<p>A navbar with all elements on the left.</p>
 			<p>Use a single child under <code>div.navbar</code>.</p>
 
-			<div class="navbar">
+			<div class="navbar dark">
 				<ul>
-					<li><h1 class="title">TITLE</h1></li>
-					<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
-					<li><a href="#">Link 4</a></li>
+					<li><h1 class="title">Navbar</h1></li>
 				</ul>
 			</div>
-
+			<br>
+			<div class="navbar pink">
+				<ul>
+					<li><h1 class="title">Navbar</h1></li>
+				</ul>
+			</div>
+			<br>	
+			<div class="navbar purple">
+				<ul>
+					<li><h1 class="title">Navbar</h1></li>
+				</ul>
+			</div>
+			<br>
+			<div class="navbar dark-blue">
+				<ul>
+					<li><h1 class="title">Navbar</h1></li>
+				</ul>
+			</div>
+			<br>
+			<div class="navbar light-blue">
+				<ul>
+					<li><h1 class="title">Navbar</h1></li>
+				</ul>
+			</div>
+			
 			<div>
 				<pre class="code-block">
 					<code>
-&lt;div class=&quot;navbar&quot;&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
+&lt;div class=&quot;navbar dark&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;navbar pink&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;navbar purple&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;navbar dark-blue&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;navbar light-blue&quot;&gt;&lt;/div&gt;
+
 					</code>
 				</pre>
 			</div>
@@ -214,7 +278,7 @@
 		
 		<section id="footers">
 			<h2>Page Footer</h2>
-			<div class="page-footer">
+			<div class="page-footer dark">
 				<ul>
 					<li><h3>Column 1</h3></li>
 					<li><a>Item 1</a></li>
@@ -238,7 +302,7 @@
 			</div>
 		</section>
   </div>
-	<div class="page-footer">
+	<div class="page-footer dark">
 		<ul>
 			<li><h3>Content</h3></li>
 			<li><a href="#colors">Colors</a></li>
@@ -259,5 +323,6 @@
 			<li><a href="https://github.com/soggybag/frmwrk-css">GitHub</a></li>
 		</ul>
 	</div>
+	<script src="./tabs-group.js" type="module"></script>
 </body>
 </html>
